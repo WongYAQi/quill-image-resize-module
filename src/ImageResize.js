@@ -3,9 +3,14 @@ import DefaultOptions from './DefaultOptions';
 import { DisplaySize } from './modules/DisplaySize';
 import { Toolbar } from './modules/Toolbar';
 import { Resize } from './modules/Resize';
+import Quill from 'quill'
 
 const knownModules = { DisplaySize, Toolbar, Resize };
-
+Quill.register({
+    'modules/imageResize/DisplaySize': DisplaySize,
+    'modules/imageResize/Toolbar': Toolbar,
+    'modules/imageResize/Resize': Resize
+})
 /**
  * Custom module for quilljs to allow user to resize <img> elements
  * (Works on Chrome, Edge, Safari and replaces Firefox's native resize behavior)
