@@ -197,4 +197,9 @@ export default class ImageResize {
 
 if (window.Quill) {
     window.Quill.register('modules/imageResize', ImageResize);
+    window.Quill.register({
+        'modules/imageResize/DisplaySize': DisplaySize,
+        'modules/imageResize/Toolbar': Toolbar,
+        'modules/imageResize/Resize': Resize
+    })
 }

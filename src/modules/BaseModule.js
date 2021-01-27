@@ -1,9 +1,15 @@
+/**
+ * 如果整个系列的Module都要给 Table 使用，要怎么修改？
+ * Display 和 Resize 都是i相同的，Toolbar 不同
+ */
 export class BaseModule {
     constructor(resizer) {
         this.overlay = resizer.overlay;
         this.img = resizer.img;
         this.options = resizer.options;
         this.requestUpdate = resizer.onUpdate;
+        this.quill = resizer.quill
+        this.root = this.img
     }
     /*
         requestUpdate (passed in by the library during construction, above) can be used to let the library know that
